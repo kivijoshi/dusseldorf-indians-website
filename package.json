@@ -1,0 +1,52 @@
+{
+  "name": "dusseldorf-indians-website",
+  "version": "1.0.0",
+  "description": "Community website for Indian expatriates in Düsseldorf with integrated CMS",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx serve . --single",
+    "build": "echo 'Static site - no build required'",
+    "preview": "npx serve . --single",
+    "deploy:netlify": "npx netlify-cli deploy --prod --dir .",
+    "deploy:vercel": "npx vercel --prod",
+    "deploy:surge": "npx surge .",
+    "test": "echo 'No tests specified'",
+    "admin": "npx serve . --single && start http://localhost:3000/admin",
+    "validate": "npx html-validate index.html admin/index.html"
+  },
+  "keywords": [
+    "community",
+    "expat",
+    "dusseldorf",
+    "indian",
+    "cms",
+    "static-site",
+    "website"
+  ],
+  "author": "Düsseldorf Indian Community",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/dusseldorf-indians-website.git"
+  },
+  "homepage": "https://your-username.github.io/dusseldorf-indians-website",
+  "bugs": {
+    "url": "https://github.com/your-username/dusseldorf-indians-website/issues"
+  },
+  "devDependencies": {
+    "serve": "^14.2.1",
+    "netlify-cli": "^17.10.1",
+    "vercel": "^32.5.3",
+    "surge": "^0.23.1",
+    "html-validate": "^8.7.4"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

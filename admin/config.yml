@@ -1,0 +1,150 @@
+# Düsseldorf Indians CMS Configuration
+
+site:
+  name: "Düsseldorf Indians CMS"
+  version: "1.0.0"
+  description: "Content Management System for the Düsseldorf Indian Community Website"
+
+# CMS Settings
+cms:
+  # Data storage method (localStorage for client-side)
+  storage: "localStorage"
+  
+  # Auto-save interval (in seconds)
+  autosave: 30
+  
+  # Maximum items per section
+  limits:
+    offices: 20
+    steps: 15
+    restaurants: 50
+    groups: 20
+    services: 30
+
+# Content sections configuration
+sections:
+  basic:
+    title: "Basic Information"
+    description: "Site title, description, and header information"
+    fields:
+      - name: "title"
+        type: "text"
+        label: "Site Title"
+        required: true
+      - name: "description"
+        type: "textarea"
+        label: "Site Description"
+        required: true
+      - name: "headerDate"
+        type: "text"
+        label: "Header Date"
+        required: false
+
+  offices:
+    title: "Government Offices"
+    description: "Important government offices and services"
+    fields:
+      - name: "name"
+        type: "text"
+        label: "Office Name"
+        required: true
+      - name: "url"
+        type: "url"
+        label: "Website URL"
+        required: true
+      - name: "description"
+        type: "textarea"
+        label: "Description"
+        required: true
+      - name: "icon"
+        type: "url"
+        label: "Icon URL"
+        required: false
+
+  steps:
+    title: "First Steps"
+    description: "Step-by-step guide for new expats"
+    fields:
+      - name: "step"
+        type: "textarea"
+        label: "Step Description"
+        required: true
+
+  restaurants:
+    title: "Indian Restaurants"
+    description: "List of Indian restaurants in Düsseldorf"
+    fields:
+      - name: "name"
+        type: "text"
+        label: "Restaurant Name"
+        required: true
+      - name: "description"
+        type: "textarea"
+        label: "Description"
+        required: true
+      - name: "url"
+        type: "url"
+        label: "Website URL"
+        required: false
+      - name: "image"
+        type: "url"
+        label: "Image URL"
+        required: false
+
+  groups:
+    title: "Facebook Groups"
+    description: "Community Facebook groups"
+    fields:
+      - name: "name"
+        type: "text"
+        label: "Group Name"
+        required: true
+      - name: "url"
+        type: "url"
+        label: "Facebook URL"
+        required: true
+
+  services:
+    title: "Services"
+    description: "English-speaking service providers"
+    fields:
+      - name: "name"
+        type: "text"
+        label: "Service Name"
+        required: true
+      - name: "description"
+        type: "textarea"
+        label: "Description"
+        required: true
+      - name: "url"
+        type: "url"
+        label: "URL/Link"
+        required: false
+      - name: "icon"
+        type: "url"
+        label: "Icon URL"
+        required: false
+
+# Security settings
+security:
+  # Enable basic authentication (for future enhancement)
+  enable_auth: false
+  
+  # Session timeout (in minutes)
+  session_timeout: 60
+
+# Backup settings
+backup:
+  # Auto-backup interval (in minutes)
+  auto_backup: 30
+  
+  # Maximum number of backups to keep
+  max_backups: 10
+
+# UI settings
+ui:
+  theme: "default"
+  items_per_page: 10
+  enable_preview: true
+  enable_export: true
+  enable_import: true

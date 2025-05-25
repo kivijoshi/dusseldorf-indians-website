@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Düsseldorf Indians</title>
+    <link rel="stylesheet" href="admin-style.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:700,400|Roboto:400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="admin-container">
+        <header class="admin-header">
+            <h1>Content Management System</h1>
+            <div class="admin-actions">
+                <button id="save-all" class="btn btn-primary">Save All Changes</button>
+                <button id="preview-site" class="btn btn-secondary">Preview Site</button>
+                <button id="export-data" class="btn btn-info">Export Data</button>
+                <input type="file" id="import-data" accept=".json" style="display: none;">
+                <button id="import-btn" class="btn btn-info">Import Data</button>
+            </div>
+        </header>
+
+        <nav class="admin-nav">
+            <button class="nav-btn active" data-section="basic">Basic Info</button>
+            <button class="nav-btn" data-section="offices">Government Offices</button>
+            <button class="nav-btn" data-section="steps">First Steps</button>
+            <button class="nav-btn" data-section="restaurants">Restaurants</button>
+            <button class="nav-btn" data-section="groups">Facebook Groups</button>
+            <button class="nav-btn" data-section="services">Services</button>
+        </nav>
+
+        <main class="admin-content">
+            <!-- Basic Info Section -->
+            <section id="basic-section" class="content-section active">
+                <h2>Basic Information</h2>
+                <div class="form-group">
+                    <label for="site-title">Site Title</label>
+                    <input type="text" id="site-title" placeholder="Düsseldorf Indians">
+                </div>
+                <div class="form-group">
+                    <label for="site-description">Site Description</label>
+                    <textarea id="site-description" rows="3" placeholder="Your trusted source for expat information..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="header-date">Header Date</label>
+                    <input type="text" id="header-date" placeholder="May 25, 2025">
+                </div>
+            </section>
+
+            <!-- Government Offices Section -->
+            <section id="offices-section" class="content-section">
+                <h2>Government Offices</h2>
+                <div id="offices-list"></div>
+                <button id="add-office" class="btn btn-success">+ Add Office</button>
+            </section>
+
+            <!-- First Steps Section -->
+            <section id="steps-section" class="content-section">
+                <h2>First Steps</h2>
+                <div id="steps-list"></div>
+                <button id="add-step" class="btn btn-success">+ Add Step</button>
+            </section>
+
+            <!-- Restaurants Section -->
+            <section id="restaurants-section" class="content-section">
+                <h2>Indian Restaurants</h2>
+                <div id="restaurants-list"></div>
+                <button id="add-restaurant" class="btn btn-success">+ Add Restaurant</button>
+            </section>
+
+            <!-- Facebook Groups Section -->
+            <section id="groups-section" class="content-section">
+                <h2>Facebook Groups</h2>
+                <div id="groups-list"></div>
+                <button id="add-group" class="btn btn-success">+ Add Group</button>
+            </section>
+
+            <!-- Services Section -->
+            <section id="services-section" class="content-section">
+                <h2>Services</h2>
+                <div id="services-list"></div>
+                <button id="add-service" class="btn btn-success">+ Add Service</button>
+            </section>
+        </main>
+    </div>
+
+    <div id="notification" class="notification"></div>
+    
+    <script src="admin-script.js"></script>
+</body>
+</html>
